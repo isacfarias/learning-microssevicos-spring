@@ -1,5 +1,7 @@
 package com.farias.hrpayroll.entities;
 
+import java.io.Serializable;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,8 +9,13 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Payment {
+public class Payment implements Serializable {
 
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
+    
     private String nome;
     private Double dailyIncome;
     private Integer days;
