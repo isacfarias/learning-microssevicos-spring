@@ -41,6 +41,12 @@ public class WorkResource {
     public ResponseEntity<Worker> worker(@PathVariable Long id) {
         log.info("PORT: "+ env.getProperty("local.server.port"));
 
+        try {
+            Thread.sleep(3000);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         Worker worker = repository.findById(id).get(); 
         return ResponseEntity.ok(worker);
     }
