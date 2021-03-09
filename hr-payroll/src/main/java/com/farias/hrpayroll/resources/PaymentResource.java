@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/payments")
 public class PaymentResource {
 
+
     @Autowired
     private PaymentService service;
-
 
     @GetMapping("/{workedId}/days/{days}")
     public ResponseEntity<Payment> getMethodName(@PathVariable Long workedId,  @PathVariable int days) {
