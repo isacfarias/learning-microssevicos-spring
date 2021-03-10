@@ -18,7 +18,7 @@ public class Worker implements Serializable {
     
     private Long id;
 
-    private String nome;
+    private String name;
     
     private Double dailyIncome;
 
